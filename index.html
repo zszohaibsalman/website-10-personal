@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Advocate High Court Zohaib Salman - Immigration, Cyber Law & AI Certified Lawyer. 7 Years Experience. Developer of AI Agents using LangGraph & OpenAI.">
+    <title>Advocate Zohaib Salman | AI Certified Lawyer</title>
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Tailwind CSS (Fast Styling) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Icons & Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        law: {
+                            900: '#0f172a', // Slate 900
+                            800: '#1e293b', // Slate 800
+                            gold: '#c5a059', // Classic Legal Gold
+                            light: '#f8fafc',
+                        },
+                        brand: {
+                            whatsapp: '#25D366',
+                            udemy: '#A435F0'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                    },
+                    screens: {
+                        'xs': '475px', // Extra small devices
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased relative selection:bg-law-gold selection:text-white">
+
+    <!-- WhatsApp Floating Action Button (Mobile Optimized) -->
+    <a href="https://wa.me/923320730001" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-50 bg-brand-whatsapp text-white w-14 h-14 md:w-auto md:h-auto md:px-4 md:py-3 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300 flex items-center justify-center group animate-bounce-slow hover:animate-none">
+        <i class="fab fa-whatsapp text-3xl md:text-2xl"></i>
+        <span class="hidden md:inline-block ml-2 font-bold">Chat Now</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="font-serif text-xl sm:text-2xl font-bold text-law-900 tracking-tight flex items-center group">
+                        <i class="fas fa-scale-balanced text-law-gold mr-2 group-hover:scale-110 transition-transform"></i>
+                        Zohaib Salman
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-law-800 hover:text-law-gold font-medium transition text-sm lg:text-base">Home</a>
+                    <a href="#about" class="text-law-800 hover:text-law-gold font-medium transition text-sm lg:text-base">About</a>
+                    <a href="#education" class="text-law-800 hover:text-law-gold font-medium transition text-sm lg:text-base">Education</a>
+                    <a href="#expertise" class="text-law-800 hover:text-law-gold font-medium transition text-sm lg:text-base">Expertise</a>
+                    <a href="#contact" class="px-5 py-2.5 bg-law-900 text-white rounded hover:bg-law-800 transition shadow-md hover:shadow-lg text-sm lg:text-base font-medium">Contact Me</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" aria-label="Open Menu" class="p-2 text-law-900 hover:text-law-gold focus:outline-none focus:ring-2 focus:ring-law-gold rounded">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Collapsible) -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100 shadow-xl">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="#home" class="block px-3 py-3 rounded-md text-base font-medium text-law-800 hover:bg-slate-50 hover:text-law-gold transition">Home</a>
+                <a href="#about" class="block px-3 py-3 rounded-md text-base font-medium text-law-800 hover:bg-slate-50 hover:text-law-gold transition">About</a>
+                <a href="#education" class="block px-3 py-3 rounded-md text-base font-medium text-law-800 hover:bg-slate-50 hover:text-law-gold transition">Education</a>
+                <a href="#expertise" class="block px-3 py-3 rounded-md text-base font-medium text-law-800 hover:bg-slate-50 hover:text-law-gold transition">Expertise</a>
+                <a href="#contact" class="block px-3 py-3 rounded-md text-base font-bold text-law-gold bg-slate-50 mt-2">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-24 sm:pt-32 pb-16 flex items-center min-h-[90vh] bg-law-900 text-white overflow-hidden">
+        <!-- Abstract CSS Background for Speed -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 100 C 20 0 50 0 100 100 Z" fill="white" />
+            </svg>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 animate-fade-in-up text-center md:text-left">
+                    <div class="inline-block px-3 py-1 border border-law-gold text-law-gold rounded-full text-xs sm:text-sm font-semibold tracking-wide uppercase mb-2">
+                        AI Certified Lawyer • Immigration Expert • 7 Years Exp.
+                    </div>
+                    <!-- Responsive Typography -->
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif font-bold leading-tight">
+                        Justice through <span class="text-law-gold">Knowledge</span> & AI Innovation
+                    </h1>
+                    <p class="text-base sm:text-lg text-gray-300 max-w-lg leading-relaxed mx-auto md:mx-0">
+                        I am an <strong>Advocate High Court</strong> and <strong>AI Certified Lawyer</strong>. I combine 7 years of legal experience with the technical ability to code autonomous agents using <strong>LangGraph</strong> and <strong>OpenAI SDK</strong>.
+                    </p>
+                    <div class="flex flex-col xs:flex-row gap-4 pt-4 justify-center md:justify-start">
+                        <a href="https://wa.me/923320730001" target="_blank" class="px-6 sm:px-8 py-3 bg-brand-whatsapp text-white font-bold rounded hover:bg-green-600 transition shadow-lg text-center flex items-center justify-center gap-2 transform hover:-translate-y-0.5">
+                            <i class="fab fa-whatsapp text-xl"></i> WhatsApp Now
+                        </a>
+                        <a href="#contact" class="px-6 sm:px-8 py-3 border border-white text-white font-bold rounded hover:bg-white hover:text-law-900 transition text-center transform hover:-translate-y-0.5">
+                            Consultation
+                        </a>
+                    </div>
+                </div>
+                <!-- Image Placeholder Area -->
+                <div class="relative px-4 group mt-8 md:mt-0">
+                    <!-- Decorative Background Element -->
+                    <div class="absolute inset-0 bg-law-gold rounded-lg transform rotate-3 opacity-20 mx-4 group-hover:rotate-6 transition duration-500"></div>
+                    
+                    <!-- Image Container -->
+                    <div class="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-2xl overflow-hidden aspect-[4/5] border border-gray-700 mx-auto max-w-md">
+                        <!-- Profile Image -->
+                        <!-- 
+                             INSTRUCTIONS TO FIX IMAGE:
+                             1. Rename your photo file to: profile.jpg
+                             2. Save it in the SAME folder as this HTML file.
+                        -->
+                        <img 
+                            src="profile.jpg" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x750/1e293b/c5a059?text=Advocate+Zohaib';"
+                            alt="Advocate High Court Zohaib Salman" 
+                            class="w-full h-full object-cover object-top transform group-hover:scale-105 transition duration-700"
+                        >
+                        
+                        <!-- Optional Overlay for better text contrast if you add text over image -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-law-900/80 to-transparent opacity-50"></div>
+                    </div>
+
+                    <!-- Experience Badge (Floating) -->
+                    <div class="absolute -bottom-6 -left-2 z-20 bg-white p-4 rounded shadow-xl border-l-4 border-law-gold flex items-center gap-3 animate-fade-in-up">
+                        <div class="bg-law-900 text-law-gold w-12 h-12 flex items-center justify-center rounded-full">
+                            <i class="fas fa-scale-balanced text-xl"></i>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-3xl font-bold text-law-900 leading-none">6+</p>
+                            <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mt-1">Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-law-900">About Me</h2>
+                <div class="w-24 h-1 bg-law-gold mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12 items-start">
+                <div class="lg:w-1/2 space-y-6 text-base sm:text-lg text-gray-600 leading-relaxed text-justify sm:text-left">
+                    <p>
+                        I am Zohaib Salman, an **Advocate High Court** with **7 years of experience** and a passion for technology. I stand at the unique intersection of Immigration Law, Cyber Defense, and Artificial Intelligence.
+                    </p>
+                    <p>
+                        Beyond my legal practice, I am an **AI Certified Lawyer** with hands-on capability in software development. I comfortably code in Python and specialize in creating sophisticated **AI Agents using LangGraph and the OpenAI SDK**. This technical prowess allows me to not only understand cyber crimes at a code level but also to innovate within the legal tech space.
+                    </p>
+                    <p>
+                        My foundation is built on diverse academic rigor, including an LL.B, an M.A in Political Science, and a B.S in Agriculture. My CSS preparation gave me deep insights into **Sociology, Criminology, and Philosophy**, making me a Corporate Philosopher who understands both the human and algorithmic conditions.
+                    </p>
+                </div>
+                <div class="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+                    <!-- Feature Items -->
+                    <div class="p-6 bg-slate-50 border-l-4 border-law-gold rounded shadow-sm hover:shadow-md transition hover:-translate-y-1">
+                        <i class="fas fa-code-branch text-3xl text-law-900 mb-4"></i>
+                        <h3 class="font-bold text-xl mb-2">AI Expert</h3>
+                        <p class="text-gray-600 text-sm">Certified in building AI Agents with LangGraph & OpenAI SDK.</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 border-l-4 border-law-gold rounded shadow-sm hover:shadow-md transition hover:-translate-y-1">
+                        <i class="fas fa-passport text-3xl text-law-900 mb-4"></i>
+                        <h3 class="font-bold text-xl mb-2">Immigration</h3>
+                        <p class="text-gray-600 text-sm">Strategic advice on study visas, work permits, family sponsorship, and citizenship.</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 border-l-4 border-law-gold rounded shadow-sm hover:shadow-md transition hover:-translate-y-1">
+                        <i class="fas fa-shield-virus text-3xl text-law-900 mb-4"></i>
+                        <h3 class="font-bold text-xl mb-2">Cyber Defense</h3>
+                        <p class="text-gray-600 text-sm">Protecting digital rights and defending against cyber crime allegations.</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 border-l-4 border-law-gold rounded shadow-sm hover:shadow-md transition hover:-translate-y-1">
+                        <i class="fas fa-leaf text-3xl text-law-900 mb-4"></i>
+                        <h3 class="font-bold text-xl mb-2">Agri-Law</h3>
+                        <p class="text-gray-600 text-sm">Specialized knowledge in agriculture and land revenue matters.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 sm:py-20 bg-slate-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-law-900">Education</h2>
+                <p class="mt-4 text-gray-600">A foundation built on rigorous academic pursuit.</p>
+                <div class="w-24 h-1 bg-law-gold mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+                
+                <!-- Education Items -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-law-gold text-slate-500 group-[.is-active]:text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i class="fas fa-balance-scale text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded bg-white shadow-md border border-slate-200 hover:shadow-lg transition">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between space-x-0 sm:space-x-2 mb-1">
+                            <h3 class="font-bold text-law-900">LL.B (Bachelor of Laws)</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm sm:text-base">Comprehensive study of Civil, Criminal, and Constitutional Law.</p>
+                    </div>
+                </div>
+
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-law-gold text-slate-500 group-[.is-active]:text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i class="fas fa-landmark text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded bg-white shadow-md border border-slate-200 hover:shadow-lg transition">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between space-x-0 sm:space-x-2 mb-1">
+                            <h3 class="font-bold text-law-900">M.A Political Science</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm sm:text-base">Specialization in political theory, governance, and public policy.</p>
+                    </div>
+                </div>
+
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-law-gold text-slate-500 group-[.is-active]:text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i class="fas fa-seedling text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded bg-white shadow-md border border-slate-200 hover:shadow-lg transition">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between space-x-0 sm:space-x-2 mb-1">
+                            <h3 class="font-bold text-law-900">B.S Agriculture (Hons)</h3>
+                            <span class="text-xs font-semibold text-law-gold uppercase">4 Years</span>
+                        </div>
+                        <p class="text-gray-600 text-sm sm:text-base">Technical expertise in agricultural sciences and land management.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Certifications Section -->
+    <section id="certifications" class="py-16 sm:py-20 bg-white border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-law-900">Verified Certifications</h2>
+                <p class="mt-4 text-gray-600">Technical and legal credentials from world-class institutions.</p>
+                <div class="w-24 h-1 bg-law-gold mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Coursera Highlight -->
+            <div class="mb-12">
+                <h3 class="text-xl font-bold text-law-900 mb-6 border-l-4 border-law-gold pl-3">Coursera Specialization</h3>
+                <div class="grid gap-6 md:grid-cols-2">
+                    <a href="https://coursera.org/share/a8bbfed685b7d341ccb4495633a6c1c6" target="_blank" rel="noopener noreferrer" class="flex items-center p-6 bg-slate-50 border-l-4 border-law-gold rounded-lg shadow-sm hover:shadow-lg transition group hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center border border-slate-100 shadow-sm mr-4 group-hover:border-law-gold transition">
+                            <i class="fas fa-pen-nib text-law-gold text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-law-900 group-hover:text-law-gold transition">Legal Design: Crafting User-Centric Solutions</h3>
+                            <p class="text-sm text-gray-500">Coursera Verified</p>
+                            <span class="text-xs font-bold text-green-600 mt-2 inline-flex items-center">
+                                <i class="fas fa-check-circle mr-1"></i> Verified Certificate
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Udemy Certifications Grid -->
+            <div>
+                <h3 class="text-xl font-bold text-law-900 mb-6 border-l-4 border-brand-udemy pl-3 text-[#A435F0]">Udemy Verified Courses</h3>
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    
+                    <!-- Item 1: Python/AI (Hypothetical Title) -->
+                    <a href="https://www.udemy.com/certificate/UC-7623682e-9720-46ab-acd6-623d98427696/" target="_blank" rel="noopener noreferrer" class="flex flex-col p-6 bg-white border border-slate-200 rounded-lg hover:shadow-xl transition group hover:-translate-y-1">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3 text-[#A435F0]">
+                                <i class="fas fa-code text-lg"></i>
+                            </div>
+                            <span class="text-xs font-bold bg-purple-100 text-purple-800 px-2 py-1 rounded">Udemy</span>
+                        </div>
+                        <h3 class="font-bold text-law-900 mb-2 group-hover:text-[#A435F0] transition">Python for Legal Professionals</h3>
+                        <p class="text-xs text-gray-500 mt-auto">Click to Verify Certificate <i class="fas fa-external-link-alt ml-1"></i></p>
+                    </a>
+
+                    <!-- Item 2: AI Agents (Hypothetical Title) -->
+                    <a href="https://www.udemy.com/certificate/UC-7a1835db-290f-4a41-8a37-535edf90444f/" target="_blank" rel="noopener noreferrer" class="flex flex-col p-6 bg-white border border-slate-200 rounded-lg hover:shadow-xl transition group hover:-translate-y-1">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3 text-[#A435F0]">
+                                <i class="fas fa-robot text-lg"></i>
+                            </div>
+                            <span class="text-xs font-bold bg-purple-100 text-purple-800 px-2 py-1 rounded">Udemy</span>
+                        </div>
+                        <h3 class="font-bold text-law-900 mb-2 group-hover:text-[#A435F0] transition">AI Agents with LangGraph</h3>
+                        <p class="text-xs text-gray-500 mt-auto">Click to Verify Certificate <i class="fas fa-external-link-alt ml-1"></i></p>
+                    </a>
+
+                    <!-- Item 3: OpenAI (Hypothetical Title) -->
+                    <a href="https://www.udemy.com/certificate/UC-6d6ff07a-cdb6-4b77-8912-a3cae8bddddb/" target="_blank" rel="noopener noreferrer" class="flex flex-col p-6 bg-white border border-slate-200 rounded-lg hover:shadow-xl transition group hover:-translate-y-1">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3 text-[#A435F0]">
+                                <i class="fas fa-brain text-lg"></i>
+                            </div>
+                            <span class="text-xs font-bold bg-purple-100 text-purple-800 px-2 py-1 rounded">Udemy</span>
+                        </div>
+                        <h3 class="font-bold text-law-900 mb-2 group-hover:text-[#A435F0] transition">Mastering OpenAI API</h3>
+                        <p class="text-xs text-gray-500 mt-auto">Click to Verify Certificate <i class="fas fa-external-link-alt ml-1"></i></p>
+                    </a>
+
+                    <!-- Item 4: Cyber Security (Hypothetical Title) -->
+                    <a href="https://www.udemy.com/certificate/UC-b362f76f-9089-4b85-b30b-3a680a76f95c/" target="_blank" rel="noopener noreferrer" class="flex flex-col p-6 bg-white border border-slate-200 rounded-lg hover:shadow-xl transition group hover:-translate-y-1">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3 text-[#A435F0]">
+                                <i class="fas fa-user-secret text-lg"></i>
+                            </div>
+                            <span class="text-xs font-bold bg-purple-100 text-purple-800 px-2 py-1 rounded">Udemy</span>
+                        </div>
+                        <h3 class="font-bold text-law-900 mb-2 group-hover:text-[#A435F0] transition">Cyber Security Fundamentals</h3>
+                        <p class="text-xs text-gray-500 mt-auto">Click to Verify Certificate <i class="fas fa-external-link-alt ml-1"></i></p>
+                    </a>
+
+                    <!-- Item 5: Data Privacy (Hypothetical Title) -->
+                    <a href="https://www.udemy.com/certificate/UC-40448f7e-597b-4bb3-a8bb-6a1bf0de607d/" target="_blank" rel="noopener noreferrer" class="flex flex-col p-6 bg-white border border-slate-200 rounded-lg hover:shadow-xl transition group hover:-translate-y-1">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3 text-[#A435F0]">
+                                <i class="fas fa-lock text-lg"></i>
+                            </div>
+                            <span class="text-xs font-bold bg-purple-100 text-purple-800 px-2 py-1 rounded">Udemy</span>
+                        </div>
+                        <h3 class="font-bold text-law-900 mb-2 group-hover:text-[#A435F0] transition">Data Privacy & Protection</h3>
+                        <p class="text-xs text-gray-500 mt-auto">Click to Verify Certificate <i class="fas fa-external-link-alt ml-1"></i></p>
+                    </a>
+
+                    <!-- Item 6: Advanced Tech (Hypothetical Title) -->
+                    <a href="https://www.udemy.com/certificate/UC-21681f69-d55c-4ef8-971a-355969ef407e/" target="_blank" rel="noopener noreferrer" class="flex flex-col p-6 bg-white border border-slate-200 rounded-lg hover:shadow-xl transition group hover:-translate-y-1">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3 text-[#A435F0]">
+                                <i class="fas fa-server text-lg"></i>
+                            </div>
+                            <span class="text-xs font-bold bg-purple-100 text-purple-800 px-2 py-1 rounded">Udemy</span>
+                        </div>
+                        <h3 class="font-bold text-law-900 mb-2 group-hover:text-[#A435F0] transition">Advanced Legal Tech</h3>
+                        <p class="text-xs text-gray-500 mt-auto">Click to Verify Certificate <i class="fas fa-external-link-alt ml-1"></i></p>
+                    </a>
+                    
+                     <!-- Item 7: Automation (Hypothetical Title) -->
+                     <a href="https://www.udemy.com/certificate/UC-0a429b44-5c9e-43bd-a710-03cc97208503/" target="_blank" rel="noopener noreferrer" class="flex flex-col p-6 bg-white border border-slate-200 rounded-lg hover:shadow-xl transition group hover:-translate-y-1">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3 text-[#A435F0]">
+                                <i class="fas fa-cogs text-lg"></i>
+                            </div>
+                            <span class="text-xs font-bold bg-purple-100 text-purple-800 px-2 py-1 rounded">Udemy</span>
+                        </div>
+                        <h3 class="font-bold text-law-900 mb-2 group-hover:text-[#A435F0] transition">Workflow Automation</h3>
+                        <p class="text-xs text-gray-500 mt-auto">Click to Verify Certificate <i class="fas fa-external-link-alt ml-1"></i></p>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-16 sm:py-20 bg-law-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-white">Core Competencies</h2>
+                <p class="mt-4 text-gray-400">Interdisciplinary skills focusing on Law, AI, and Society.</p>
+                <div class="w-24 h-1 bg-law-gold mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Competency Cards with Hover Effects -->
+                <div class="bg-law-800 p-8 rounded border border-gray-700 hover:border-law-gold transition duration-300 group hover:shadow-2xl">
+                    <div class="w-12 h-12 bg-law-gold/10 rounded flex items-center justify-center mb-6 group-hover:bg-law-gold transition duration-300">
+                        <i class="fas fa-robot text-law-gold text-xl group-hover:text-law-900"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">AI Agent Development</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Certified expert in coding autonomous agents using <strong>LangGraph</strong> and <strong>OpenAI SDK</strong> for automation and legal tech.</p>
+                </div>
+
+                <div class="bg-law-800 p-8 rounded border border-gray-700 hover:border-law-gold transition duration-300 group hover:shadow-2xl">
+                    <div class="w-12 h-12 bg-law-gold/10 rounded flex items-center justify-center mb-6 group-hover:bg-law-gold transition duration-300">
+                        <i class="fas fa-passport text-law-gold text-xl group-hover:text-law-900"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Immigration Law</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Expert guidance on study visas, work permits, family sponsorship, and citizenship applications.</p>
+                </div>
+
+                <div class="bg-law-800 p-8 rounded border border-gray-700 hover:border-law-gold transition duration-300 group hover:shadow-2xl">
+                    <div class="w-12 h-12 bg-law-gold/10 rounded flex items-center justify-center mb-6 group-hover:bg-law-gold transition duration-300">
+                        <i class="fas fa-shield-virus text-law-gold text-xl group-hover:text-law-900"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cyber Crime Law</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Defense against digital fraud, harassment, data theft, and PECA ordinance cases.</p>
+                </div>
+
+                <div class="bg-law-800 p-8 rounded border border-gray-700 hover:border-law-gold transition duration-300 group hover:shadow-2xl">
+                    <div class="w-12 h-12 bg-law-gold/10 rounded flex items-center justify-center mb-6 group-hover:bg-law-gold transition duration-300">
+                        <i class="fas fa-brain text-law-gold text-xl group-hover:text-law-900"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Corporate Philosophy</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Applying logic, ethics, and critical thinking to corporate governance, strategy, and unshakeable legal arguments.</p>
+                </div>
+
+                <div class="bg-law-800 p-8 rounded border border-gray-700 hover:border-law-gold transition duration-300 group hover:shadow-2xl">
+                    <div class="w-12 h-12 bg-law-gold/10 rounded flex items-center justify-center mb-6 group-hover:bg-law-gold transition duration-300">
+                        <i class="fas fa-fingerprint text-law-gold text-xl group-hover:text-law-900"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Criminology</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Understanding criminal behavior and forensics to build stronger defense cases in complex trials.</p>
+                </div>
+                
+                 <div class="bg-law-800 p-8 rounded border border-gray-700 hover:border-law-gold transition duration-300 group hover:shadow-2xl">
+                    <div class="w-12 h-12 bg-law-gold/10 rounded flex items-center justify-center mb-6 group-hover:bg-law-gold transition duration-300">
+                        <i class="fas fa-tractor text-law-gold text-xl group-hover:text-law-900"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Agricultural Affairs</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Scientific background helping in technical aspects of land, crop disputes and environmental law.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect / Contact Section -->
+    <section id="contact" class="py-16 sm:py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-law-900 mb-6">Let's Connect</h2>
+            <p class="text-lg text-gray-600 mb-12">
+                Whether for legal consultation on immigration or AI tech solutions, I am available on the following platforms.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 flex-wrap">
+                <a href="https://wa.me/923320730001" target="_blank" class="flex items-center justify-center gap-3 px-8 py-4 bg-brand-whatsapp text-white rounded shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300 w-full sm:w-auto">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <span class="font-bold text-lg">WhatsApp</span>
+                </a>
+
+                <a href="https://www.facebook.com/Zohaibsalmanofficial" target="_blank" class="flex items-center justify-center gap-3 px-8 py-4 bg-[#1877F2] text-white rounded shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300 w-full sm:w-auto">
+                    <i class="fab fa-facebook-f text-2xl"></i>
+                    <span class="font-bold text-lg">Facebook</span>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/zohaibsalman/" target="_blank" class="flex items-center justify-center gap-3 px-8 py-4 bg-[#0A66C2] text-white rounded shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300 w-full sm:w-auto">
+                    <i class="fab fa-linkedin-in text-2xl"></i>
+                    <span class="font-bold text-lg">LinkedIn</span>
+                </a>
+            </div>
+
+            <!-- Simple Contact Info -->
+            <div class="mt-16 border-t border-gray-100 pt-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4 text-law-900">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h4 class="font-bold text-law-900">Location</h4>
+                    <p class="text-gray-500 text-sm mt-1">Pakistan</p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4 text-law-900">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h4 class="font-bold text-law-900">Call / WhatsApp</h4>
+                    <p class="text-gray-500 text-sm mt-1">+92 332 0730001</p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4 text-law-900">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4 class="font-bold text-law-900">Email</h4>
+                    <p class="text-gray-500 text-sm mt-1">zohaibsalman2@outlook.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-law-900 text-white py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="mb-4 md:mb-0">
+                <span class="font-serif text-xl font-bold tracking-tight">Zohaib Salman</span>
+                <p class="text-gray-500 text-sm mt-1">Immigration Lawyer • AI Expert • Corporate Philosopher</p>
+            </div>
+            <div class="flex space-x-8 mt-4 md:mt-0">
+                <a href="https://www.facebook.com/Zohaibsalmanofficial" target="_blank" aria-label="Facebook" class="text-gray-400 hover:text-law-gold transition transform hover:scale-110">
+                    <i class="fab fa-facebook-f text-lg"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/zohaibsalman/" target="_blank" aria-label="LinkedIn" class="text-gray-400 hover:text-law-gold transition transform hover:scale-110">
+                    <i class="fab fa-linkedin-in text-lg"></i>
+                </a>
+                <a href="https://wa.me/923320730001" target="_blank" aria-label="WhatsApp" class="text-gray-400 hover:text-law-gold transition transform hover:scale-110">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                </a>
+            </div>
+        </div>
+        <div class="text-center mt-8 text-gray-600 text-xs">
+            &copy; <script>document.write(new Date().getFullYear())</script> Zohaib Salman. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
